@@ -1,0 +1,37 @@
+<HTML>
+	<head>
+		<title>VAPI Demo</title>
+        <script src="//cdn.pubnub.com/pubnub-3.15.2.min.js"></script>
+        <script src="//ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+        <script>
+        function sub() {
+ 
+            pubnub = PUBNUB({
+                subscribe_key : '<%= pubNubSubKey %>'
+            })
+     
+            console.log("Subscribing..");
+            pubnub.subscribe({                                     
+                channel : "call",
+                message : function (message, envelope, channelOrGroup, time, channel) {
+                    console.log(
+                        "Message Received:" +  time + "\n" +                    
+                        JSON.stringify(message) + "\n"
+                    )
+                },
+                connect : console.log('Connected')
+            })
+        };
+        
+        $( document ).ready(function() {
+            console.log( "Ready!" );
+            sub();
+        });
+        </script>
+	</head>
+	<body>
+		<h1>Hello World</h1>
+		<p>This is a VAPI Demo</p>
+		<p>Please call <%= inboundNumber %></p>
+	</body>
+</HTML>

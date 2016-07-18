@@ -1,0 +1,22 @@
+[
+    {
+        "action": "record",
+        "beepStart": false,
+        "eventUrl": [
+            "https://voice.ngrok.io/recording?from={RECORDING_FROM}&to={RECORDING_TO}"
+        ]
+    },
+    {
+        "action": "connect",
+        "from": "FROM_NUMBER",
+        "eventUrl": [
+            "https://voice.ngrok.io/event"
+        ],
+        "endpoint": [
+            {
+                "type": "phone",
+                "number": "PROXY_TO_NUMBEr"
+            }
+        ]
+    }
+]
