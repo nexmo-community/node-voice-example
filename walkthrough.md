@@ -26,6 +26,11 @@ Install the Nexmo Command Line Interfaces (CLI):
 npm install -g nexmo-cli
 ```
 
+Setup the Nexmo CLI with credentials from [settings in the Nexmo Dashboard](https://dashboard.nexmo.com/settings):
+
+```sh
+nexmo s NEXMO_API_KEY NEXMO_API_SECRET
+
 ## Create an Application in Nexmo
 
 From within the `nexmo-node-call-tracking` directory:
