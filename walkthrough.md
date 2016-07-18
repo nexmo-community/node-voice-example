@@ -36,12 +36,12 @@ nexmo s NEXMO_API_KEY NEXMO_API_SECRET
 From within the `nexmo-node-call-tracking` directory:
 
 ```sh
-nexmo app:create demo-app --keyfile key.txt http://example.com http://example.com
+nexmo app:create call-tracking --keyfile key.txt http://example.com http://example.com
 ```
 
 ## Create a `.env` file with configuration information
 
-There's an existing `example.env` that we can use.
+There is an existing `example.env` that we can use.
 
 ```sh
 cp example.env .env
