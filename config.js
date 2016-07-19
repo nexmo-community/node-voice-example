@@ -9,6 +9,7 @@ var config = {
   pubNubPubKey: process.env['PUBNUB_PUB_KEY'],
   pubNubSubKey: process.env['PUBSUB_SUB_KEY'],
   inboundNumber: process.env['INBOUND_NUMBER'],
+  inboundNumberCountryCode: process.env['INBOUND_NUMBER_COUNTRY_CODE'],
   proxyToNumber: process.env['PROXY_TO_NUMBER'],
   port: process.env['PORT'] || 5000
 };

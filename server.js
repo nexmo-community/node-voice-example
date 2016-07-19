@@ -1,5 +1,6 @@
 var config = require('./config');
 var request = require('request');
+var libphonenumber = require('libphonenumber');
 
 var app = require('express')();
 app.set('port', (config.port || 5000));
@@ -9,11 +10,16 @@ app.use(require('body-parser').json());
 app.get('/', function(req, res) {
   res.render('index', {
     pubNubSubKey: config.pubNubSubKey,
-    inboundNumber: config.inboundNumber
+    inboundNumber: libphonenumber.intl(config.inboundNumber, config.inboundNumberCountryCode)
   });
 });
 
-// TODO: event route
+var CallTracker = require('./lib/CallTracker');
+var callTracker = new CallTracker(config);
+
+app.post('/event', function(req, res) {
+  callTracker.event(req.body);
+});
 
 // TODO: call route
 

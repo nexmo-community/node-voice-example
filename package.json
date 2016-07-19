@@ -2,6 +2,10 @@
   "name": "nexmo-node-call-tracking",
   "version": "0.1.0",
   "description": "An Call Tracking example using the Nexmo Voice API written in Node.",
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:nexmo-community/nexmo-node-call-tracking.git"
+  },
   "main": "server.js",
   "dependencies": {
     "body-parser": "^1.15.2",
@@ -9,6 +13,7 @@
     "ejs": "^2.4.2",
     "express": "^4.14.0",
     "jsonwebtoken": "^7.1.6",
+    "libphonenumber": "0.0.10",
     "nexmo": "^1.0.0-beta-7",
     "node-uuid": "^1.4.7",
     "pubnub": "^3.15.2",
