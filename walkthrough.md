@@ -11,6 +11,7 @@ You will need the following installed:
 * A Git client
 * Node
 * A local tunnel solutions such as [ngrok](https://ngrok.com/)
+* Open up the documentation <https://docs-ea.nexmo.com/voice/voice-api> - if you're in a workshop then as the instructors for the username/password
 
 Get this code:
 
@@ -79,7 +80,27 @@ Update the app to set the webhook urls to be your server instead of the example.
 nexmo app:update ['app-id'] demo-app [your url]/call [your url]/event
 ```
 
-## Implement `/call` Route with Proxy NCCO
+## Add a simple outbound call on the `/call/:number` route
+
+* Implement the `/call/:number` route
+* Implement the outbound request within `CallTracker.prototype.call` sending the following body payload
+
+```js
+{
+  "to": [{
+    "type": "phone",
+    "number": "TO_NUMBER"
+  }],
+  "from": {
+    "type": "phone",
+    "number": "FROM_NUMBER"
+  },
+  "answer_url": ["ANSWER_WEBHOOK_URL"],
+  "event_url: ["EVENT_WEBHOOK_URL"]
+}
+```
+
+## Implement `/answer` Route with Proxy NCCO
 
 ```json
 [
@@ -104,7 +125,6 @@ Note: we're overriding the `eventUrl` for this action.
 [
     {
         "action": "record",
-        "beepStart": false,
         "eventUrl": [
             "https://voice.ngrok.io/recording?from={RECORDING_FROM}&to={RECORDING_TO}"
         ]
