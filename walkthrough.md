@@ -2,6 +2,14 @@
 
 ## Walkthrough
 
+What we'll cover:
+
+1. Getting the development environment set up
+2. Making an outbound call and upon answer speaking text to the user
+3. Proxying an inbound call to another number
+4. Recording the proxied call
+5. Retrieving and playing the recording of the call
+
 ### Prerequisites
 
 You'll need a Nexmo account. Signup at <https://dashboard.nexmo.com/sign-up>.
@@ -109,6 +117,8 @@ https://docs-ea.nexmo.com/voice/voice-api/ncco-reference#talk
 
 ### Implement `/answer` Route with Proxy NCCO
 
+Gotcha: For the moment the `event_url` in the previous outbound call example is inconsistent with the `eventUrl` in the example below.
+
 ```json
 [
   {
@@ -119,7 +129,8 @@ https://docs-ea.nexmo.com/voice/voice-api/ncco-reference#talk
             "type": "phone",
             "number": "PROXY_TO_NUMBER"
         }
-    ]
+    ],
+    "eventUrl": ["WEBHOOK_URL"]
   }
 ]
 ```
