@@ -77,7 +77,7 @@ nexmo link:app [LVN] [app-id]
 Update the app to set the webhook urls to be your server instead of the example.com placeholders used at creation.
 
 ```sh
-nexmo app:update ['app-id'] demo-app [your url]/call [your url]/event
+nexmo app:update ['app-id'] demo-app [your url]/answer [your url]/event
 ```
 
 ## Add a simple outbound call on the `/call/:number` route
