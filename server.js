@@ -13,7 +13,11 @@ app.get('/', function(req, res) {
   });
 });
 
+// TODO: event route
+
 // TODO: call route
+
+// TODO: talk route
 
 // TODO: answer route
 
