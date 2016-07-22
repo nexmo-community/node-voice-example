@@ -77,3 +77,17 @@ Navigate to <http://localhost:5000>, and open up the JavaScript console.
 Now, call the number that's listed on the page. From there you'll see events being logged to the JavaScript console as they come in to your application.
 
 When the call is finished a text message will be sent to the number that all calls are being proxied to with a URL for the call recording. The URL for the call recording will also be pushed to the web browser.
+
+## Troubleshooting
+
+### asn1 encoding routines:ASN1_CHECK_TLEN:wrong tag
+
+If you're seeing errors such as `asn1 encoding routines:ASN1_CHECK_TLEN:wrong tag` then you should run the following on your `key.txt`:
+
+```sh
+openssl rsa -in key.txt -out key.txt
+```
+
+### Illegal Sender Address - rejected
+
+Ensure that when sending an SMS that you are sending `from` a LVN registered with Nexmo.
