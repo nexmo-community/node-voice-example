@@ -11,26 +11,26 @@
     <script>
     function sub() {
 
-        pubnub = PUBNUB({
-            subscribe_key : '<%= pubNubSubKey %>'
-        })
- 
-        console.log("Subscribing..");
-        pubnub.subscribe({                                     
-            channel : "call",
-            message : function (message, envelope, channelOrGroup, time, channel) {
-                console.log(
-                    "Message Received:" +  time + "\n" +                    
-                    JSON.stringify(message) + "\n"
-                )
-            },
-            connect : console.log('Connected')
-        })
+      pubnub = PUBNUB({
+        subscribe_key : '<%= pubNubSubKey %>'
+      })
+
+      console.log("Subscribing..");
+      pubnub.subscribe({                                     
+        channel : "call",
+        message : function (message, envelope, channelOrGroup, time, channel) {
+          console.log(
+            "Message Received:" +  time + "\n" +                    
+            JSON.stringify(message) + "\n"
+          )
+        },
+        connect : console.log('Connected')
+      })
     };
     
     $( document ).ready(function() {
-        console.log( "Ready!" );
-        sub();
+      console.log( "Ready!" );
+      sub();
     });
     </script>
 	</head>
