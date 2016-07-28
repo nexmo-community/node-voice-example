@@ -51,13 +51,13 @@ nexmo link:app [LVN] [app-id]
 Update the app to set the webhook urls to be your server instead of the example.com placeholders used at creation.
 
 ```sh
-nexmo app:update ['app-id'] demo-app [your url]/call [your url]/event
+nexmo app:update ['app-id'] demo-app [your url]/answer [your url]/event
 ```
 
 We recommend using [ngrok](https://ngrok.com/) to tunnel through to your locally running application. In which case the command above is likely to be something similar to:
 
 ```sh
-nexmo app:update ['app-id'] demo-app https://___.ngrok.io/call https://___.ngrok.io/event
+nexmo app:update ['app-id'] demo-app https://___.ngrok.io/answer https://___.ngrok.io/event
 ```
 
 Where `___` should be replaced with the `ngrok.io` subdomain you are assigned.

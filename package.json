@@ -1,7 +1,7 @@
 {
   "name": "nexmo-node-call-tracking",
   "version": "0.1.0",
-  "description": "An Call Tracking example using the Nexmo Voice API written in Node.",
+  "description": "A Call Tracking example using the Nexmo Voice API written in Node.",
   "repository": {
     "type": "git",
     "url": "git@github.com:nexmo-community/nexmo-node-call-tracking.git"
