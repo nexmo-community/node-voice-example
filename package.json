@@ -12,7 +12,7 @@
     "dotenv": "^2.0.0",
     "ejs": "^2.4.2",
     "express": "^4.14.0",
-    "jsonwebtoken": "^7.1.6",
+    "jsonwebtoken": "^8.0.0",
     "libphonenumber": "0.0.10",
     "nexmo": "^1.0.0-beta-7",
     "node-uuid": "^1.4.7",
