@@ -16,7 +16,7 @@
     "libphonenumber": "0.0.10",
     "nexmo": "^1.0.0-beta-7",
     "node-uuid": "^1.4.7",
-    "pubnub": "^3.15.2",
+    "pubnub": "^7.4.0",
     "request": "^2.73.0"
   },
   "devDependencies": {
